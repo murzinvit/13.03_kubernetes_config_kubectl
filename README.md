@@ -11,7 +11,7 @@
 ![kubectl_get_depl](https://github.com/murzinvit/screen/blob/b786bfa6b4fd7e26abfeff0f5d3e99bcfedc9586/Kuber_kubectl_get%20deployment_3.jpg) </br>
 Зайти в контейнер в deploy frontend: `kubectl exec -n stage deploy/frontend -it -- bash` </br>
 ![exec_frontend](https://github.com/murzinvit/screen/blob/17fe33b395b9936f88da1315b64e91faad37992e/Kuber_exec_frontend.jpg) </br>
-Доступ к deploy: `kubectl port-forward deployment/frontend 80 80`</br>
+Доступ к deploy: `kubectl port-forward -n stage deployment/frontend 80 80`</br>
 ![forward_in_brow](https://github.com/murzinvit/screen/blob/a1b2d6e88b1f90b8ecb5616bfa76c8b56b784091/Kuber_port_forward_in_brow.jpg) </br>
 Зайти в контейнер в deploy backend: `kubectl exec -n stage deploy/backend -it -- bash` </br>
 ![exec_backend](https://github.com/murzinvit/screen/blob/5744dbea9d8ee0f27f9d568b31eb587153d3c861/Kuber_exec_backend.jpg) </br>
