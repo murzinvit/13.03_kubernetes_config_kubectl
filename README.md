@@ -22,9 +22,12 @@
 Ответ от db: `kubectl port-forward -n stage deployment/db 30000:5432`</br>
 ![Kuber_curl_postgres](https://github.com/murzinvit/screen/blob/eff71e5445754d45a38055080e995fcee2ccd349/Kuber_curl_postgres.jpg) </br>
 
-
 ### Задание 2: ручное масштабирование </br>
 При работе с приложением иногда может потребоваться вручную добавить пару копий. Используя команду kubectl scale, попробуйте увеличить количество бекенда и фронта до 3. После уменьшите количество копий до 1. Проверьте, на каких нодах оказались копии после каждого действия (kubectl describe).
+Масштабировать frontend: `kubectl scale --replicas=2 -n stage deployment/frontend` </br>
+![scale_frontend](https://github.com/murzinvit/screen/blob/f7cca75d9fd7718eb6f937451c408dd6e0a673be/Kuber_scale_frontend.jpg) </br>
+Масштабировать backend: `kubectl scale --replicas=2 -n stage deployment/backend` </br>
+![scale_frontend](https://github.com/murzinvit/screen/blob/6eda183769bc79136042f880a92282b51828066f/Kuber_scale_backend.jpg) </br>
 
 ### Рабочие заметки: </br>
 `kubectl expose deployment frontend -n stage --type=NodePort --name=front-svc` </br>
