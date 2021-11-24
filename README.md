@@ -16,7 +16,7 @@
 Зайти в контейнер в backend: `kubectl exec -n stage deploy/backend -it -- bash` </br>
 ![exec_backend](https://github.com/murzinvit/screen/blob/5744dbea9d8ee0f27f9d568b31eb587153d3c861/Kuber_exec_backend.jpg) </br>
 Ответ от backend: `kubectl port-forward -n stage deployment/backend 30000:9000`</br>
-![backend_answer]() </br>
+![backend_answer](https://github.com/murzinvit/screen/blob/36f3a07c8fdf971cc60f860cb48d552ece71bc5a/Kuber_curl_backend.jpg) </br>
 Зайти в контейнер в db: `kubectl exec -n stage deploy/db -it -- bash` </br>
 ![db_answer](https://github.com/murzinvit/screen/blob/eff71e5445754d45a38055080e995fcee2ccd349/Kuber_exec_postres_news.jpg) </br>
 Ответ от db: `kubectl port-forward -n stage deployment/db 30000:5432`</br>
