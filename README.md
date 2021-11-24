@@ -14,3 +14,8 @@
 
 ### Задание 2: ручное масштабирование </br>
 При работе с приложением иногда может потребоваться вручную добавить пару копий. Используя команду kubectl scale, попробуйте увеличить количество бекенда и фронта до 3. После уменьшите количество копий до 1. Проверьте, на каких нодах оказались копии после каждого действия (kubectl describe).
+
+### Рабочие заметки: </br>
+`kubectl expose deployment frontend -n stage --type=NodePort --name=front-svc` </br>
+`kubectl expose deployment backend -n stage --type=NodePort --name=back-svc` </br>
+`kubectl expose deployment db -n stage --type=NodePort --name=db-svc` </br>
