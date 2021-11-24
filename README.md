@@ -4,6 +4,7 @@
 * сделайте запросы к бекенду; </br>
 * сделайте запросы к фронту; </br>
 * подключитесь к базе данных. </br>
+--------------------------------------------------------------
 Создал nsmaspace stage: `kubectl create namespace stage` </br>
 Установил nfs через helm: `helm install nfs-server stable/nfs-server-provisioner` </br>
 Запустил 2 pvc, 3 деплоя, 3 сервиса из файла: [deploy_in_stage.yaml](https://github.com/murzinvit/13.03_kubernetes_config_kubectl/blob/e9e1be417bea3dc9e804d7fd0c585f89c63bcf13/deploy_in_stage.yaml) </br>
@@ -12,7 +13,8 @@
 ![exec_frontend](https://github.com/murzinvit/screen/blob/17fe33b395b9936f88da1315b64e91faad37992e/Kuber_exec_frontend.jpg) </br>
 Доступ к deploy: `kubectl port-forward deployment/frontend 80 80`</br>
 ![forward_in_brow](https://github.com/murzinvit/screen/blob/a1b2d6e88b1f90b8ecb5616bfa76c8b56b784091/Kuber_port_forward_in_brow.jpg) </br>
-
+Зайти в контейнер в deploy backend: `kubectl exec -n stage deploy/backend -it -- bash` </br>
+![exec_backend](https://github.com/murzinvit/screen/blob/5744dbea9d8ee0f27f9d568b31eb587153d3c861/Kuber_exec_backend.jpg) </br>
 
 ### Задание 2: ручное масштабирование </br>
 При работе с приложением иногда может потребоваться вручную добавить пару копий. Используя команду kubectl scale, попробуйте увеличить количество бекенда и фронта до 3. После уменьшите количество копий до 1. Проверьте, на каких нодах оказались копии после каждого действия (kubectl describe).
