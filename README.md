@@ -26,8 +26,12 @@
 При работе с приложением иногда может потребоваться вручную добавить пару копий. Используя команду kubectl scale, попробуйте увеличить количество бекенда и фронта до 3. После уменьшите количество копий до 1. Проверьте, на каких нодах оказались копии после каждого действия (kubectl describe).
 Масштабировать frontend: `kubectl scale --replicas=2 -n stage deployment/frontend` </br>
 ![scale_frontend](https://github.com/murzinvit/screen/blob/f7cca75d9fd7718eb6f937451c408dd6e0a673be/Kuber_scale_frontend.jpg) </br>
+На какой ноде запустился pod: `kubectl describe pod -n stage`</br>
+![run_in_ingress_node](https://github.com/murzinvit/screen/blob/114e58c86985191bbab70a7116f685a5df20c7ea/Kuber_run_in_ingress_node.jpg) </br>
 Масштабировать backend: `kubectl scale --replicas=2 -n stage deployment/backend` </br>
 ![scale_frontend](https://github.com/murzinvit/screen/blob/6eda183769bc79136042f880a92282b51828066f/Kuber_scale_backend.jpg) </br>
+На какой ноде запустился pod: `kubectl describe pod -n stage`</br>
+![run_in_ingress_node](https://github.com/murzinvit/screen/blob/4411b02c777564d18ee03b2335e0e49abbdf3a45/Kuber_backend_run_in_ingress.jpg) </br>
 
 ### Рабочие заметки: </br>
 `kubectl expose deployment frontend -n stage --type=NodePort --name=front-svc` </br>
