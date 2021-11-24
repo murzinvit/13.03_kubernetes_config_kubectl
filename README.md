@@ -5,7 +5,7 @@
 * сделайте запросы к фронту;
 * подключитесь к базе данных.
 Запустил 3 деплоймента и 3 сервиса к ним, из файла: </br>
-![kubectl_get_depl](https://github.com/murzinvit/screen/blob/a95d58bc37ee9bcbba046c94fe833bd22b437ef7/Kuber_kubectl_get%20deployment_.jpg) </br>
+![kubectl_get_depl](https://github.com/murzinvit/screen/blob/b786bfa6b4fd7e26abfeff0f5d3e99bcfedc9586/Kuber_kubectl_get%20deployment_3.jpg) </br>
 
 ### Задание 2: ручное масштабирование </br>
 При работе с приложением иногда может потребоваться вручную добавить пару копий. Используя команду kubectl scale, попробуйте увеличить количество бекенда и фронта до 3. После уменьшите количество копий до 1. Проверьте, на каких нодах оказались копии после каждого действия (kubectl describe).
