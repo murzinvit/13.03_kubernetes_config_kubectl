@@ -20,7 +20,7 @@
 Зайти в контейнер в db: `kubectl exec -n stage deploy/db -it -- bash` </br>
 ![db_answer](https://github.com/murzinvit/screen/blob/a49a40f11d1bdf9afcf1f422d89d4eefb979b8f2/Kuber_db_postgre_answer.jpg) </br>
 Ответ от db: `kubectl port-forward -n stage deployment/db 30000:5432`</br>
-![Kuber_curl_postgres](https://github.com/murzinvit/screen/blob/9a9eaf83f49252a29ce90401fec9b25845090ec9/Kuber_curl_postgres.jpg) </br>
+![Kuber_curl_postgres](https://github.com/murzinvit/screen/blob/eff71e5445754d45a38055080e995fcee2ccd349/Kuber_exec_postres_news.jpg) </br>
 
 
 ### Задание 2: ручное масштабирование </br>
