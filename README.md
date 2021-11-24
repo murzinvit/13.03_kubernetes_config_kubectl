@@ -15,7 +15,7 @@
 ![forward_in_brow](https://github.com/murzinvit/screen/blob/a1b2d6e88b1f90b8ecb5616bfa76c8b56b784091/Kuber_port_forward_in_brow.jpg) </br>
 Зайти в контейнер в deploy backend: `kubectl exec -n stage deploy/backend -it -- bash` </br>
 ![exec_backend](https://github.com/murzinvit/screen/blob/5744dbea9d8ee0f27f9d568b31eb587153d3c861/Kuber_exec_backend.jpg) </br>
-Доступ к deploy db: `kubectl port-forward deployment/db 5432 5432`</br>
+Доступ к deploy db: `kubectl port-forward -n stage deployment/db 5432 5432`</br>
 
 
 ### Задание 2: ручное масштабирование </br>
