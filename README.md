@@ -18,9 +18,9 @@
 Ответ от backend: `kubectl port-forward -n stage deployment/backend 30000:9000`</br>
 ![backend_answer]() </br>
 Зайти в контейнер в db: `kubectl exec -n stage deploy/db -it -- bash` </br>
-![db_answer](https://github.com/murzinvit/screen/blob/a49a40f11d1bdf9afcf1f422d89d4eefb979b8f2/Kuber_db_postgre_answer.jpg) </br>
+![db_answer](https://github.com/murzinvit/screen/blob/eff71e5445754d45a38055080e995fcee2ccd349/Kuber_exec_postres_news.jpg) </br>
 Ответ от db: `kubectl port-forward -n stage deployment/db 30000:5432`</br>
-![Kuber_curl_postgres](https://github.com/murzinvit/screen/blob/eff71e5445754d45a38055080e995fcee2ccd349/Kuber_exec_postres_news.jpg) </br>
+![Kuber_curl_postgres](https://github.com/murzinvit/screen/blob/eff71e5445754d45a38055080e995fcee2ccd349/Kuber_curl_postgres.jpg) </br>
 
 
 ### Задание 2: ручное масштабирование </br>
