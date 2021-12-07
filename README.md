@@ -6,7 +6,8 @@
 * подключитесь к базе данных. </br>
 --------------------------------------------------------------
 ## Запуск приложения: </br>
-Запустил frontend, backend и db, и сервисы к ним: [deploy.yaml](https://github.com/murzinvit/13.03_kubernetes_kubectl/blob/1d07275ba2f22d0bc0d4e4fc82f9e96f6d4c2d10/deploy_in_stage.yaml) </br>
+Запустил frontend, backend и db, и сервисы к ним: </br>
+[deploy.yaml](https://github.com/murzinvit/13.03_kubernetes_kubectl/blob/1d07275ba2f22d0bc0d4e4fc82f9e96f6d4c2d10/deploy_in_stage.yaml) </br>
 ![kubectl_get_depl](https://github.com/murzinvit/13.03_kubernetes_config_kubectl/blob/78104326b739b177662b1d3552422a2a80511dd8/deploy_in_stage.yaml) </br>
 ## Тестирование frontend:</br>
 Ответ на - curl frontend: `kubectl exec deploy/frontend -it -- curl localhost:80` </br>
