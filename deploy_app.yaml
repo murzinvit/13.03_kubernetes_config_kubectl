@@ -29,7 +29,7 @@ spec:
           mountPath: /mnt
       volumes:
       - name: file-storage
-        emptyDir: {}         
+        emptyDir: {}
 ---
 apiVersion: apps/v1
 kind: Deployment
