@@ -8,15 +8,18 @@
 ## Запуск приложения: </br>
 Запустил frontend, backend и db, и сервисы к ним: [deploy_app.yaml](https://github.com/murzinvit/13.03_kubernetes_config_kubectl/blob/2a4ae3f1595cab44581bb5834a2f9f06c154232c/deploy_app.yaml) </br>
 ![kubectl_get_depl](https://github.com/murzinvit/screen_1/blob/7374fbd2c459babfc2c08f9d3b8482d69eced116/Kuber_get_deploy_kubectl.jpg) </br>
-## Тестирование frontend:</br>
+## Тестирование frontend: </br>
 Ответ на - curl frontend: `kubectl exec deploy/frontend -it -- curl localhost:80` </br>
 ![exec_frontend](https://github.com/murzinvit/screen_1/blob/4f59d78c6c17bae19dee5ebca8458a087a00964a/Kuber_curl_frontend.jpg) </br>
 
 Ответ от frontend после forward: `kubectl port-forward deploy/frontend 3000:80`</br>
 ![Kuber_curl_list](https://github.com/murzinvit/screen_1/blob/41e467d5b481a375f18ff5c00f4a8fafdbc88cf8/Kuber_front_forward_result.jpg) </br>
 
-Зайти в контейнер в backend: `kubectl exec -n stage deploy/backend -it -- bash` </br>
-![exec_backend](https://github.com/murzinvit/screen/blob/5744dbea9d8ee0f27f9d568b31eb587153d3c861/Kuber_exec_backend.jpg) </br>
+## Тестирование backend: </br>
+Ответ на - curl backend: `kubectl exec deploy/backend -it -- curl localhost:9000` </br>
+![exec_backend](https://github.com/murzinvit/screen_1/blob/190c9899800f01f083f7aaf9aaee993bc1f003d2/Kuber_curl_backend_faild.jpg) </br>
+При запуске приложения в бекенде выдаёт ошибку: [log_file]() из backend </br>
+![exec_backend_faild](https://github.com/murzinvit/screen_1/blob/190c9899800f01f083f7aaf9aaee993bc1f003d2/Kuber_curl_backend_faild.jpg) </br>
 
 Ответ от backend: `kubectl port-forward -n stage deployment/backend 30000:9000`</br>
 ![backend_answer](https://github.com/murzinvit/screen/blob/36f3a07c8fdf971cc60f860cb48d552ece71bc5a/Kuber_curl_backend.jpg) </br>
