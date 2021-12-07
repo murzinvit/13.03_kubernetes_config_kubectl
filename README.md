@@ -34,6 +34,7 @@
 ![run_in_ingress_node](https://github.com/murzinvit/screen/blob/4411b02c777564d18ee03b2335e0e49abbdf3a45/Kuber_backend_run_in_ingress.jpg) </br>
 
 ### Рабочие заметки: </br>
+https://github.com/netology-code/devkub-homeworks </br>
 `kubectl expose deployment frontend -n stage --type=NodePort --name=front-svc` </br>
 `kubectl expose deployment backend -n stage --type=NodePort --name=back-svc` </br>
 `kubectl expose deployment db -n stage --type=NodePort --name=db-svc` </br>
