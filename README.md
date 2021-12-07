@@ -9,8 +9,8 @@
 Установил nfs через helm: `helm install nfs-server stable/nfs-server-provisioner` </br>
 Запустил 2 pvc, 3 деплоя, 3 сервиса из файла: [deploy_in_stage.yaml](https://github.com/murzinvit/13.03_kubernetes_config_kubectl/blob/e9e1be417bea3dc9e804d7fd0c585f89c63bcf13/deploy_in_stage.yaml) </br>
 ![kubectl_get_depl](https://github.com/murzinvit/screen/blob/b786bfa6b4fd7e26abfeff0f5d3e99bcfedc9586/Kuber_kubectl_get%20deployment_3.jpg) </br>
-Зайти в контейнер в frontend: `kubectl exec -n stage deploy/frontend -it -- bash` </br>
-![exec_frontend](https://github.com/murzinvit/screen/blob/17fe33b395b9936f88da1315b64e91faad37992e/Kuber_exec_frontend.jpg) </br>
+Зайти в контейнер в frontend: `kubectl exec -n stage deploy/frontend -it -- curl localhost:80` </br>
+![exec_frontend](https://github.com/murzinvit/screen_1/blob/4f59d78c6c17bae19dee5ebca8458a087a00964a/Kuber_curl_frontend.jpg) </br>
 Ответ от frontend: `kubectl port-forward -n stage deployment/frontend 30000:80`</br>
 ![Kuber_curl_list](https://github.com/murzinvit/screen/blob/aa254c577e166c513da28479b4f8ab8fe50d02e4/Kuber_curl_list_30000.jpg) </br>
 Зайти в контейнер в backend: `kubectl exec -n stage deploy/backend -it -- bash` </br>
