@@ -5,16 +5,15 @@
 * сделайте запросы к фронту; </br>
 * подключитесь к базе данных. </br>
 --------------------------------------------------------------
-Создал nsmaspace stage: `kubectl create namespace stage` </br>
-Установил nfs через helm: `helm install nfs-server stable/nfs-server-provisioner` </br>
-Запустил 2 pvc, 3 деплоя, 3 сервиса из файла: [deploy_in_stage.yaml](https://github.com/murzinvit/13.03_kubernetes_config_kubectl/blob/e9e1be417bea3dc9e804d7fd0c585f89c63bcf13/deploy_in_stage.yaml) </br>
-![kubectl_get_depl](https://github.com/murzinvit/screen/blob/b786bfa6b4fd7e26abfeff0f5d3e99bcfedc9586/Kuber_kubectl_get%20deployment_3.jpg) </br>
 
-Ответ curl из контейнера frontend: `kubectl exec -n stage deploy/frontend -it -- curl localhost:80` </br>
+Запустил frontend, backend и db, и 3 сервиса к ним: [deploy_in_stage.yaml](https://github.com/murzinvit/13.03_kubernetes_config_kubectl/blob/e9e1be417bea3dc9e804d7fd0c585f89c63bcf13/deploy_in_stage.yaml) </br>
+![kubectl_get_depl](https://github.com/murzinvit/screen/blob/b786bfa6b4fd7e26abfeff0f5d3e99bcfedc9586/Kuber_kubectl_get%20deployment_3.jpg) </br>
+### Тестирование frontend:</br>
+Ответ на - curl frontend: `kubectl exec deploy/frontend -it -- curl localhost:80` </br>
 ![exec_frontend](https://github.com/murzinvit/screen_1/blob/4f59d78c6c17bae19dee5ebca8458a087a00964a/Kuber_curl_frontend.jpg) </br>
 
-Ответ от frontend: `kubectl port-forward -n stage deployment/frontend 30000:80`</br>
-![Kuber_curl_list](https://github.com/murzinvit/screen/blob/aa254c577e166c513da28479b4f8ab8fe50d02e4/Kuber_curl_list_30000.jpg) </br>
+Ответ от frontend после forward: `kubectl port-forward deploy/frontend 3000:80`</br>
+![Kuber_curl_list](https://github.com/murzinvit/screen_1/blob/41e467d5b481a375f18ff5c00f4a8fafdbc88cf8/Kuber_front_forward_result.jpg) </br>
 
 Зайти в контейнер в backend: `kubectl exec -n stage deploy/backend -it -- bash` </br>
 ![exec_backend](https://github.com/murzinvit/screen/blob/5744dbea9d8ee0f27f9d568b31eb587153d3c861/Kuber_exec_backend.jpg) </br>
