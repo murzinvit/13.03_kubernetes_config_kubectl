@@ -21,8 +21,6 @@
 Ответ от backend после port-forward на порт 3001: `kubectl port-forward deploy/backend 3001:9000` </br>
 ![exec_backend_faild](https://github.com/murzinvit/screen_1/blob/0d839c304aa53215021b871e776f0ccd9151b5c3/Kuber_farward_backend_last.jpg) </br>
 
-Ответ от backend: `kubectl port-forward -n stage deployment/backend 30000:9000`</br>
-![backend_answer](https://github.com/murzinvit/screen/blob/36f3a07c8fdf971cc60f860cb48d552ece71bc5a/Kuber_curl_backend.jpg) </br>
 Зайти в контейнер в db: `kubectl exec -n stage deploy/db -it -- bash` </br>
 ![db_answer](https://github.com/murzinvit/screen/blob/eff71e5445754d45a38055080e995fcee2ccd349/Kuber_exec_postres_news.jpg) </br>
 Ответ от db: `kubectl port-forward -n stage deployment/db 30000:5432`</br>
