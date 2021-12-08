@@ -6,14 +6,14 @@
 * подключитесь к базе данных. </br>
 --------------------------------------------------------------
 ## Запуск приложения: </br>
-Запустил frontend, backend и db, и сервисы к ним: [deploy_app.yaml](https://github.com/murzinvit/13.03_kubernetes_config_kubectl/blob/2a4ae3f1595cab44581bb5834a2f9f06c154232c/deploy_app.yaml) </br>
-![kubectl_get_depl](https://github.com/murzinvit/screen_1/blob/7374fbd2c459babfc2c08f9d3b8482d69eced116/Kuber_get_deploy_kubectl.jpg) </br>
+Запустил приложене: [microservices-demo](https://github.com/microservices-demo/microservices-demo) </br>
+![kubectl_get_depl](https://github.com/murzinvit/screen_1/blob/c684d6d406141eb02a53752080bd4c84ef579e28/Kuber_deploy_list_sock_shop.jpg) </br>
 ## Тестирование frontend: </br>
 Ответ на - curl frontend: `kubectl exec deploy/frontend -it -- curl localhost:80` </br>
-![exec_frontend](https://github.com/murzinvit/screen_1/blob/4f59d78c6c17bae19dee5ebca8458a087a00964a/Kuber_curl_frontend.jpg) </br>
+![exec_frontend]() </br>
 
 Ответ от frontend после forward: `kubectl port-forward deploy/frontend 3000:80`</br>
-![Kuber_curl_list](https://github.com/murzinvit/screen_1/blob/41e467d5b481a375f18ff5c00f4a8fafdbc88cf8/Kuber_front_forward_result.jpg) </br>
+![Kuber_curl_list]() </br>
 
 ## Тестирование backend: </br>
 Ответ на - curl backend: `kubectl exec deploy/backend -it -- curl localhost:9000` </br>
@@ -42,6 +42,7 @@
 ### Рабочие заметки: </br>
 https://github.com/netology-code/devkub-homeworks </br>
 https://www.dmosk.ru/miniinstruktions.php?mini=postgresql-users </br>
+https://github.com/microservices-demo/microservices-demo </br>
 `kubectl expose deployment frontend -n stage --type=NodePort --name=front-svc` </br>
 `kubectl expose deployment backend -n stage --type=NodePort --name=back-svc` </br>
 `kubectl expose deployment db -n stage --type=NodePort --name=db-svc` </br>
