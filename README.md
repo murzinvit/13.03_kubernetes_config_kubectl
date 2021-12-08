@@ -42,6 +42,7 @@
 ### Рабочие заметки: </br>
 https://github.com/netology-code/devkub-homeworks </br>
 https://www.dmosk.ru/miniinstruktions.php?mini=postgresql-users </br>
+https://github.com/microservices-demo/microservices-demo </br>
 `kubectl expose deployment frontend -n stage --type=NodePort --name=front-svc` </br>
 `kubectl expose deployment backend -n stage --type=NodePort --name=back-svc` </br>
 `kubectl expose deployment db -n stage --type=NodePort --name=db-svc` </br>
